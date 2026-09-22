@@ -3,7 +3,8 @@ package com.leclowndu93150.wakes.simulation;
 import com.leclowndu93150.wakes.config.WakesConfig;
 import com.leclowndu93150.wakes.render.WakeColor;
 import com.leclowndu93150.wakes.utils.WakesUtils;
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Arrays;
 
 public abstract class SimulationNode {

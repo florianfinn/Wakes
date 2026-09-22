@@ -170,6 +170,44 @@ prism {
         }
     }
 
+    version("26.3") {
+        publishingDependencies {
+            requires("baguettelib")
+            optional("forge-config-api-port")
+            optional("modmenu")
+        }
+
+        common {
+            dependencies {
+                compileOnly("curse.maven:forge-config-api-port-547434:8938808")
+                compileOnly("curse.maven:baguettelib-1264423:8942776")
+                compileOnly("curse.maven:irisshaders-455508:8888283")
+            }
+        }
+
+        fabric {
+            loaderVersion = "0.19.5"
+            fabricApi("0.161.0+26.3")
+
+            dependencies {
+                modImplementation("curse.maven:forge-config-api-port-547434:8938808")
+                modImplementation("curse.maven:baguettelib-1264423:8942776")
+                modImplementation("curse.maven:modmenu-308702:8854511")
+                modRuntimeOnly("curse.maven:sodium-394468:8888037")
+                modRuntimeOnly("curse.maven:irisshaders-455508:8888283")
+            }
+        }
+
+        neoforge {
+            loaderVersion = "26.3.0.8-beta"
+
+            dependencies {
+                modImplementation("curse.maven:baguettelib-1264423:8942777")
+                modRuntimeOnly("curse.maven:sodium-394468:8888038")
+            }
+        }
+    }
+
     publishing {
         changelog = """
         Shader support improvements:
