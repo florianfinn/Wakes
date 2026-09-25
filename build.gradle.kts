@@ -16,7 +16,7 @@ prism {
         modId = "wakes"
         name = "Wakes"
         description = "Wakes aims to add simple wakes that fit the spirit of vanilla"
-        license = "MIT"
+        license = "GPL-3.0-only"
         author("Leclowndu93150")
     }
 
