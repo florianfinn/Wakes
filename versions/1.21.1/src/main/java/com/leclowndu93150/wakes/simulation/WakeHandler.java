@@ -23,7 +23,9 @@ public class WakeHandler {
     private final int maxY;
     private ArrayList<SplashPlaneParticle> splashPlanes;
 
-    public static Resolution resolution = WakesConfig.APPEARANCE.wakeResolution.get();
+    // WakeHandler can be initialized before NeoForge loads the client config.
+    // tick() applies the configured resolution once a world is active.
+    public static Resolution resolution = Resolution.SIXTEEN;
     public static boolean resolutionResetScheduled = false;
 
     private WakeHandler(Level world) {
